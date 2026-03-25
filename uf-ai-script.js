@@ -97,29 +97,29 @@ document.addEventListener("DOMContentLoaded", function () {
     //   100% { transform: rotate(360deg); }
     // }
 
-    @keyframes flicker {
-      0% { opacity: 0.6; transform: rotate(var(--angle)) translateX(20px) scale(0.8);}
-      50% { opacity: 1; transform: rotate(var(--angle)) translateX(20px) scale(1.2);}
-      100% { opacity: 0.5; transform: rotate(var(--angle)) translateX(20px) scale(0.7);}
-    }
+    // @keyframes flicker {
+    //   0% { opacity: 0.6; transform: rotate(var(--angle)) translateX(20px) scale(0.8);}
+    //   50% { opacity: 1; transform: rotate(var(--angle)) translateX(20px) scale(1.2);}
+    //   100% { opacity: 0.5; transform: rotate(var(--angle)) translateX(20px) scale(0.7);}
+    // }
 
-    @keyframes pulse1 {
-      0% { width: 0; height: 0; opacity: 0.7; }
-      50% { width: 80%; height: 80%; opacity: 0.25; }
-      100% { width: 0; height: 0; opacity: 0; }
-    }
+    // @keyframes pulse1 {
+    //   0% { width: 0; height: 0; opacity: 0.7; }
+    //   50% { width: 80%; height: 80%; opacity: 0.25; }
+    //   100% { width: 0; height: 0; opacity: 0; }
+    // }
 
-    @keyframes pulse2 {
-      0% { width: 0; height: 0; opacity: 0.6; }
-      50% { width: 100%; height: 100%; opacity: 0.2; }
-      100% { width: 0; height: 0; opacity: 0; }
-    }
+    // @keyframes pulse2 {
+    //   0% { width: 0; height: 0; opacity: 0.6; }
+    //   50% { width: 100%; height: 100%; opacity: 0.2; }
+    //   100% { width: 0; height: 0; opacity: 0; }
+    // }
 
-    @keyframes pulse3 {
-      0% { width: 0; height: 0; opacity: 0.5; }
-      50% { width: 70%; height: 70%; opacity: 0.15; }
-      100% { width: 0; height: 0; opacity: 0; }
-    }
+    // @keyframes pulse3 {
+    //   0% { width: 0; height: 0; opacity: 0.5; }
+    //   50% { width: 70%; height: 70%; opacity: 0.15; }
+    //   100% { width: 0; height: 0; opacity: 0; }
+    // }
   `;
   document.head.appendChild(style);
 
@@ -144,6 +144,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // === Click Action (like WhatsApp open) ===
   logo.addEventListener("click", () => {
-    alert("Open your chat / widget here 🚀");
+    alert("Urbanfeat AI module");
   });
 });
