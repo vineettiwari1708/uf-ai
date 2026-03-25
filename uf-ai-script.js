@@ -5,39 +5,43 @@ document.addEventListener("DOMContentLoaded", function () {
   // === Inject CSS ===
   const style = document.createElement("style");
   style.innerHTML = `
-    // .ai_logo {
-    //   position: fixed;
-    //   bottom: 20px;
-    //   right: 20px;
-    //   width: 70px;
-    //   height: 70px;
-    //   border-radius: 50%;
-    //   background-color: #001f2e;
-    //   display: flex;
-    //   align-items: center;
-    //   justify-content: center;
-    //   z-index: 99999;
-    //   cursor: pointer;
-    // }
     .ai_logo_icon {
-  position: relative;
-  width: 100px;
-  height: 100px;
-  border-radius: 50%;
-  background-color: #001f2e;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  overflow: visible;
-
-  /* Bright border glow */
-  border: 2px solid rgba(255, 255, 255, 0.5);
-  box-shadow:
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      width: 70px;
+      height: 70px;
+      border-radius: 50%;
+      background-color: #001f2e;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 99999;
+      cursor: pointer;
+      box-shadow:
     0 0 10px rgba(255, 255, 255, 0.4),
     0 0 20px rgba(0, 242, 255, 0.6),
     0 0 30px rgba(0, 195, 255, 0.4);
-}
+    }
+//     .ai_logo_icon {
+//   position: relative;
+//   width: 100px;
+//   height: 100px;
+//   border-radius: 50%;
+//   background-color: #001f2e;
+
+//   display: flex;
+//   align-items: center;
+//   justify-content: center;
+//   overflow: visible;
+
+//   /* Bright border glow */
+//   border: 2px solid rgba(255, 255, 255, 0.5);
+//   box-shadow:
+//     0 0 10px rgba(255, 255, 255, 0.4),
+//     0 0 20px rgba(0, 242, 255, 0.6),
+//     0 0 30px rgba(0, 195, 255, 0.4);
+// }
 .ai_logo_icon::after {
   content: '';
   position: absolute;
