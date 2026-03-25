@@ -19,7 +19,7 @@ document.addEventListener("DOMContentLoaded", function () {
     //   z-index: 99999;
     //   cursor: pointer;
     // }
-    .ai_logo {
+    .ai_logo_icon {
   position: relative;
   width: 100px;
   height: 100px;
@@ -38,7 +38,7 @@ document.addEventListener("DOMContentLoaded", function () {
     0 0 20px rgba(0, 242, 255, 0.6),
     0 0 30px rgba(0, 195, 255, 0.4);
 }
-.ai_logo::after {
+.ai_logo_icon::after {
   content: '';
   position: absolute;
   top: -4px;
@@ -59,9 +59,9 @@ document.addEventListener("DOMContentLoaded", function () {
   100% { transform: scale(1.2); opacity: 0.5; }
 }
 
-    .ai_logo::before,
-    .ai_logo .pulse2,
-    .ai_logo .pulse3 {
+    .ai_logo_icon::before,
+    .ai_logo_icon .pulse2,
+    .ai_logo_icon .pulse3 {
       content: '';
       position: absolute;
       border-radius: 50%;
@@ -69,7 +69,7 @@ document.addEventListener("DOMContentLoaded", function () {
       filter: blur(10px);
     }
 
-    .ai_logo::before {
+    .ai_logo_icon::before {
       width: 20%;
       height: 20%;
       top: 50%;
@@ -80,7 +80,7 @@ document.addEventListener("DOMContentLoaded", function () {
       z-index: 5;
     }
 
-    .ai_logo .pulse2 {
+    .ai_logo_icon .pulse2 {
       width: 30%;
       height: 30%;
       top: 50%;
@@ -91,7 +91,7 @@ document.addEventListener("DOMContentLoaded", function () {
       z-index: 5;
     }
 
-    .ai_logo .pulse3 {
+    .ai_logo_icon .pulse3 {
       width: 25%;
       height: 25%;
       top: 50%;
@@ -164,7 +164,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // === Inject HTML ===
   const logo = document.createElement("div");
-  logo.className = "ai_logo";
+  logo.className = "ai_logo_icon";
 
   logo.innerHTML = `
     <div class="text_orbit_wrapper">
