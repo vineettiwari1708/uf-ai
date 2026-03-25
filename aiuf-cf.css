@@ -1,0 +1,277 @@
+/* ======= RESET & BODY ======= */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: radial-gradient(circle at center, #111827, #030712);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    position: relative;
+}
+
+body::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+}
+
+body > * {
+    position: relative;
+    z-index: 1;
+}
+
+/* ======= FORM BOX ======= */
+.form-box {
+    width: 100%;
+    max-width: 520px;
+    
+    background: rgba(0, 0, 0, 0.25);
+    backdrop-filter: blur(15px);
+    border-radius: 15px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+
+    box-shadow: 0 0 20px rgba(0, 242, 255, 0.3);
+    transition: 0.3s;
+}
+
+.form-box:hover {
+    box-shadow: 0 0 25px #00f2ff, 0 0 45px #00f2ff, 0 0 70px #00f2ff;
+}
+
+/* ======= LOGO ======= */
+.ai_logo_image {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px;
+    width: 100%;
+    justify-content: center;
+    border-bottom: 2px solid #e0e0e0;
+}
+
+.ai_logo_image img {
+    width: 150px;
+}
+
+.ai_logo {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-color: #001f2e;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Pulses */
+.ai_logo::before,
+.ai_logo .pulse2,
+.ai_logo .pulse3 {
+    content: '';
+    position: absolute;
+    border-radius: 50%;
+    pointer-events: none;
+    filter: blur(10px);
+}
+
+.ai_logo::before {
+    width: 20%;
+    height: 20%;
+    background: rgba(0, 242, 255, 0.5);
+    animation: pulse1 2s infinite;
+}
+
+.ai_logo .pulse2 {
+    width: 30%;
+    height: 30%;
+    background: rgba(0, 195, 255, 0.4);
+    animation: pulse2 3s infinite;
+}
+
+.ai_logo .pulse3 {
+    width: 25%;
+    height: 25%;
+    background: rgba(0, 242, 255, 0.3);
+    animation: pulse3 4s infinite;
+}
+
+/* ======= FORM FIELDS ======= */
+.form-box input {
+    width: 100%;
+    max-width: 450px;
+
+    height: 40px;
+    padding: 6px 12px;
+
+    border-radius: 6px;
+    border: 1px solid rgba(0, 242, 255, 0.5);
+
+    background: rgba(0, 0, 0, 0.25);
+    color: #fff;
+
+    font-size: 1em;
+    outline: none;
+
+    backdrop-filter: blur(10px);
+    transition: 0.3s;
+}
+
+.form-box input::placeholder {
+    color: rgba(255,255,255,0.6);
+}
+
+.form-box input:focus {
+    border-color: #00f2ff;
+    box-shadow: 0 0 10px #00f2ff, 0 0 20px #00c3ff;
+}
+
+/* Hide labels (CF7) */
+.form-box label {
+    display: none;
+}
+
+/* ======= FORM GROUP ======= */
+.form-group {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-bottom: 15px;
+}
+
+/* ======= SUBMIT BUTTON ======= */
+.submit-btn {
+    width: 100%;
+    max-width: 300px;
+
+    padding: 12px 28px;
+    font-size: 1em;
+
+    color: #00f2ff!important;
+    background: transparent;
+    margin-top:20px;
+
+    border: 2px solid #00f2ff;
+    border-radius: 6px;
+
+    cursor: pointer;
+    font-weight: bold;
+    text-transform: uppercase;
+
+    transition: 0.3s;
+}
+
+.submit-btn:hover {
+    background: #00f2ff;
+     color: #030712!important;
+    box-shadow: 0 0 20px #00f2ff, 0 0 40px #00f2ff, 0 0 60px #00f2ff;
+}
+
+
+.submit-btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+/* ======= ORBIT ANIMATION ======= */
+.text_orbit_wrapper {
+    position: relative;
+}
+
+.logo_text {
+    font-weight: bold;
+    font-size: 1.5rem;
+    color: white;
+}
+
+.orbit-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    animation: orbit-rotate 3s linear infinite;
+}
+
+.orbit {
+    position: absolute;
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    background: white;
+
+    transform: rotate(var(--angle)) translateX(30px);
+
+    box-shadow:
+        0 0 6px rgba(0, 242, 255, 0.8),
+        -2px 0 4px rgba(0, 242, 255, 0.6);
+
+    animation: flicker 1s infinite alternate;
+}
+
+/* ======= ANIMATIONS ======= */
+@keyframes pulse1 {
+    0% {width:0;height:0;opacity:0.7;}
+    50% {width:80%;height:80%;opacity:0.25;}
+    100% {width:0;height:0;opacity:0;}
+}
+
+@keyframes pulse2 {
+    0% {width:0;height:0;opacity:0.6;}
+    50% {width:100%;height:100%;opacity:0.2;}
+    100% {width:0;height:0;opacity:0;}
+}
+
+@keyframes pulse3 {
+    0% {width:0;height:0;opacity:0.5;}
+    50% {width:70%;height:70%;opacity:0.15;}
+    100% {width:0;height:0;opacity:0;}
+}
+
+@keyframes orbit-rotate {
+    0% {transform:rotate(0deg);}
+    100% {transform:rotate(360deg);}
+}
+
+@keyframes flicker {
+    0% {transform: rotate(var(--angle)) translateX(30px) scale(0.8); opacity:0.6;}
+    50% {transform: rotate(var(--angle)) translateX(30px) scale(1.2); opacity:1;}
+    100% {transform: rotate(var(--angle)) translateX(30px) scale(0.7); opacity:0.5;}
+}
+
+/* ======= RESPONSIVE ======= */
+@media (max-width: 600px) {
+    .form-box {
+        max-width: 90%;
+        padding: 20px 15px 30px;
+    }
+
+    .ai_logo {
+        width: 80px;
+        height: 80px;
+    }
+
+    .logo_text {
+        font-size: 1.2rem;
+    }
+}
+
+/* ======= CF7 FIX ======= */
+.wpcf7-form .input-field {
+    margin-bottom: 0;
+}
+
+/* Hide fieldset only if you really want */
+fieldset {
+    display: none;
+}
