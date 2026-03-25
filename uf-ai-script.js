@@ -92,10 +92,10 @@ document.addEventListener("DOMContentLoaded", function () {
       animation: flicker 1s infinite alternate;
     }
 
-    @keyframes orbit-rotate {
-      0% { transform: rotate(0deg); }
-      100% { transform: rotate(360deg); }
-    }
+    // @keyframes orbit-rotate {
+    //   0% { transform: rotate(0deg); }
+    //   100% { transform: rotate(360deg); }
+    // }
 
     @keyframes flicker {
       0% { opacity: 0.6; transform: rotate(var(--angle)) translateX(20px) scale(0.8);}
