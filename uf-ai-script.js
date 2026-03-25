@@ -1,4 +1,7 @@
 document.addEventListener("DOMContentLoaded", function () {
+
+  // if (window.location.pathname === "/aiuf-cf") return;
+  
   const scriptTag = document.getElementById("uf-ai-script");
   if (!scriptTag) return;
 
